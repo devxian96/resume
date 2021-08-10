@@ -10,7 +10,7 @@ const MenuList = () => {
       <h4> 목차 </h4>
       <nav>
         <ol>
-          <li className={(styles.menuList, styles.active)}>1 페이지</li>
+          <li className={{ ...styles.menuList, ...styles.active }}>1 페이지</li>
           <li className={styles.menuList}>2 페이지</li>
           <li className={styles.menuList}>3 페이지</li>
           <li className={styles.menuList}>4 페이지</li>
