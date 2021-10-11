@@ -34,6 +34,10 @@ const App = () => {
     return () => window.removeEventListener("resize", updateWindowDimensions);
   }, []);
 
+  const eventBind = (e) => {
+    console.log(e);
+  };
+
   return (
     <div style={styles.container}>
       <div style={styles.menuList}>
@@ -41,7 +45,16 @@ const App = () => {
       </div>
       <div style={styles.viewer}>
         <PDFViewer width="100%" height={height}>
-          <Document>{pages.default.map((component) => component)}</Document>
+          <Document
+            ref={(e) => eventBind(e)}
+            title="장석현 이력서"
+            author="장석현"
+            subject="이력서"
+            keywords="이력서, 프론트엔드, 풀스택, JS, Javascript"
+            language="ko"
+          >
+            {pages.default.map((component) => component)}
+          </Document>
         </PDFViewer>
       </div>
     </div>

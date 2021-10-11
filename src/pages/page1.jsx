@@ -14,15 +14,9 @@ const styles = StyleSheet.create({
 });
 
 const page1 = (
-  <Page key="1" size="A4" style={styles.page}>
+  <Page key="1" size="A4" style={styles.page} pageNumber={1}>
     <View style={styles.section}>
-      <Text>Section #1</Text>
-    </View>
-    <View style={styles.section}>
-      <Text>Section #1</Text>
-    </View>
-    <View style={styles.section}>
-      <Text>Section #1</Text>
+      <Text>장석현</Text>
     </View>
   </Page>
 );
